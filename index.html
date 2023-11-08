@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+<html lang="fr" x-data="{menuIsOpen: false, dtIsClicked: false}" :class="{noscroll:menuIsOpen,}" x-data="{}">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,13 +25,16 @@
       .noscroll body {
         overflow: hidden;
       }
+      .accordeon {
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
     <!-- https://emmet.io/ -->
     <!-- header>h1{Test de menu} -->
     <header>
-      <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class=""header_menuBtn>menu</button>
+      <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header_menuBtn">menu</button>
       <h1>Test de menu</h1>
       <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
         <ul>
@@ -40,16 +43,16 @@
           <li><a href="#">item 3</a></li>
         </ul>
         <dl>
-          <dt>Lorem.</dt>
-          <dd>Lorem ipsum dolor sit amet.</dd>
+          <dt class="accordeon" @click="dtIsClicked = ! dtIsClicked">Lorem.</dt>
+          <dd x-show="dtIsClicked">Lorem ipsum dolor sit amet.</dd>
         </dl>
         <dl>
-          <dt>Nobis?</dt>
-          <dd>Maiores ipsum aliquam odio nostrum!</dd>
+          <dt class="accordeon" @click="dtIsClicked = ! dtIsClicked">Nobis?</dt>
+          <dd x-show="dtIsClicked">Maiores ipsum aliquam odio nostrum!</dd>
         </dl>
         <dl>
-          <dt>Dolorem!</dt>
-          <dd>Assumenda ad ipsam earum nisi.</dd>
+          <dt class="accordeon" @click="dtIsClicked = ! dtIsClicked">Dolorem!</dt>
+          <dd x-show="dtIsClicked">Assumenda ad ipsam earum nisi.</dd>
         </dl>
       </nav>
     </header>
