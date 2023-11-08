@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen: false, dtIsClicked: false}" :class="{noscroll:menuIsOpen,}" x-data="{}">
+<html lang="fr" x-data="{menuIsOpen: false, dt1IsClicked: false, dt2IsClicked: false, dt3IsClicked: false}" :class="{noscroll:menuIsOpen,}" x-data="{}">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -42,18 +42,6 @@
           <li><a href="#">item 2</a></li>
           <li><a href="#">item 3</a></li>
         </ul>
-        <dl>
-          <dt class="accordeon" @click="dtIsClicked = ! dtIsClicked">Lorem.</dt>
-          <dd x-show="dtIsClicked">Lorem ipsum dolor sit amet.</dd>
-        </dl>
-        <dl>
-          <dt class="accordeon" @click="dtIsClicked = ! dtIsClicked">Nobis?</dt>
-          <dd x-show="dtIsClicked">Maiores ipsum aliquam odio nostrum!</dd>
-        </dl>
-        <dl>
-          <dt class="accordeon" @click="dtIsClicked = ! dtIsClicked">Dolorem!</dt>
-          <dd x-show="dtIsClicked">Assumenda ad ipsam earum nisi.</dd>
-        </dl>
       </nav>
     </header>
     <!-- h2>lorem2^p>lorem -->
@@ -64,5 +52,17 @@
       nemo aliquid pariatur quam voluptates animi laudantium, aperiam
       consectetur nobis enim.
     </p>
+    <dl>
+      <dt class="accordeon" @click="dt1IsClicked = ! dt1IsClicked">Lorem.</dt>
+      <dd x-show="dt1IsClicked">Lorem ipsum dolor sit amet.</dd>
+    </dl>
+    <dl>
+      <dt class="accordeon" @click="dt2IsClicked = ! dt2IsClicked">Nobis?</dt>
+      <dd x-show="dt2IsClicked">Maiores ipsum aliquam odio nostrum!</dd>
+    </dl>
+    <dl>
+      <dt class="accordeon" @click="dt3IsClicked = ! dt3IsClicked">Dolorem!</dt>
+      <dd x-show="dt3IsClicked">Assumenda ad ipsam earum nisi.</dd>
+    </dl>
   </body>
 </html>
