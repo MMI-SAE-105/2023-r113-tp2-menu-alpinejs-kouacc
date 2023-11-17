@@ -17,6 +17,17 @@
         display: grid;
         place-content: center;
       }
+
+      .menu li {
+        list-style: none;
+      }
+
+      .menu a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 2rem;
+      }
+
       .header_menuBtn {
         position: relative;
         z-index: 10;
@@ -38,9 +49,8 @@
       <h1>Test de menu</h1>
       <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
         <ul>
-          <li><a href="#">item 1</a></li>
-          <li><a href="#">item 2</a></li>
-          <li><a href="#">item 3</a></li>
+          <li><a href="cats/index.html">Chats</a></li>
+          <li><a href="dogs/index.html">Chiens</a></li>
         </ul>
       </nav>
     </header>
