@@ -1,3 +1,4 @@
 - nom : LALLEMAND
 - prénom : Maxence
 - URL publique du site : https://main--teal-rugelach-49f727.netlify.app/
+- URL avec nom de domaine : http://tp-menu.maxencelallemand.fr/
