@@ -1,9 +1,37 @@
 <!DOCTYPE html>
-<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-<title>404 - Page Non trouvée</title>
-<h1>Page Non trouvée</h1>
-<form action="https://duckduckgo.com/" method="GET" x-data="{ q:'', }" x-on:submit="q = q + ' site:mmimontbeliard.com'">
-    <label for="q">Text à chercher :</label>
-    <input type="text" id="q" name="q" x-model="q">
-    <button type="submit">Rechercher</button>
+<head>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>404 - Page Non trouvée</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+        body {
+            background-color: #f5f5f5;
+            font-family: 'Roboto Slab', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        .search-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 2rem;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<div class="404-content">
+    <h1>404</h1>
+    <h2>Page non trouvée</h2>
+</div>
+<div class="search-form">
+    <form action="https://duckduckgo.com/" method="GET">
+        <label for="q">Vous cherchez quelque chose ?</label>
+        <input type="text" id="q" name="q" x-model="q">
+        <button type="submit">Rechercher</button>
+</div>
 </form>
